@@ -1,5 +1,5 @@
 {
-  "name": "SlimeVR ESP32-C6 WROOM-1-N8",
+  "name": "SlimeVR ESP32-C6-WROOM-1-N8",
   "version": "0.7.3",
   "new_install_prompt_erase": true,
   "builds": [
