@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ESP32-C6 WROOM-1 SlimeVR Firmware</title>
+
+    <script
+        type="module"
+        src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
+    ></script>
+
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .description {
+            opacity: 0.75;
+            margin-bottom: 30px;
+        }
+
+        esp-web-install-button {
+            --esp-tools-button-color: #5865f2;
+            --esp-tools-button-text-color: white;
+            --esp-tools-button-border-radius: 8px;
+        }
+
+        .warning {
+            margin-top: 30px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #fff3cd;
+            color: #664d03;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ESP32-C6 WROOM-1 SlimeVR Tracker</h1>
+
+    <p class="description">
+        Install the latest firmware directly from your browser.
+    </p>
+
+    <esp-web-install-button
+        manifest="./firmware/v1.0.0/manifest.json"
+    >
+        <button slot="activate">
+            Install Firmware
+        </button>
+
+        <span slot="unsupported">
+            Your browser does not support Web Serial.
+            Please use Google Chrome or Microsoft Edge.
+        </span>
+
+        <span slot="not-allowed">
+            Firmware installation requires HTTPS.
+        </span>
+    </esp-web-install-button>
+
+    <div class="warning">
+        <strong>Before installing:</strong><br>
+        Connect your tracker to your computer using a USB data cable.
+        Installing firmware may erase the existing firmware.
+    </div>
+
+</body>
+</html>
